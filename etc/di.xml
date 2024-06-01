@@ -29,6 +29,13 @@
         </arguments>
     </virtualType>
 
+    <!-- Authorize.NET Payment Gateway Config  -->
+    <virtualType name="Pronko\Authorizenet\Gateway\Config\Config" type="Magento\Payment\Gateway\ConfigInterface">
+        <arguments>
+            <argument name="methodCode" xsi:type="string">pronko_authorizenet</argument>
+        </arguments>
+    </virtualType>
+
     <!-- Authorize.NET Payment Command Pool Configuration -->
     <virtualType name="PronkoAuthorizenetCommandPool" type="Magento\Payment\Gateway\Command\CommandPool">
         <arguments>
