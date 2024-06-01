@@ -1,5 +1,5 @@
 define([
-    'Magneto_Payment/js/view/payment/cc-form'
+    'Magento_Payment/js/view/payment/cc-form'
 ], function (Component) {
     'use strict';
 
