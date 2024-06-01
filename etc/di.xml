@@ -25,12 +25,18 @@
     <!-- Authorize.NET Payment Config Value Handler Configuration -->
     <virtualType name="PronkoAuthorizenetConfigValueHandler" type="Magento\Payment\Gateway\Config\ConfigValueHandler">
         <arguments>
-            <argument name="configInterface" xsi:type="object">Pronko\Authorizenet\Gateway\Config\Config</argument>
+            <argument name="configInterface" xsi:type="object">PronkoAuthorizenetGatewayConfig</argument>
         </arguments>
     </virtualType>
 
     <!-- Authorize.NET Payment Gateway Config  -->
-    <virtualType name="Pronko\Authorizenet\Gateway\Config\Config" type="Magento\Payment\Gateway\ConfigInterface">
+    <!-- <virtualType name="Pronko\Authorizenet\Gateway\Config\Config" type="Magento\Payment\Gateway\ConfigInterface">-->
+    <!--    <arguments>-->
+    <!--        <argument name="methodCode" xsi:type="string">pronko_authorizenet</argument>-->
+    <!--    </arguments>-->
+    <!-- </virtualType>-->
+
+    <virtualType name="PronkoAuthorizenetGatewayConfig" type="Magento\Payment\Gateway\Config\Config">
         <arguments>
             <argument name="methodCode" xsi:type="string">pronko_authorizenet</argument>
         </arguments>
