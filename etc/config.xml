@@ -2,8 +2,17 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <pronko_authorizenet>
-            <title>Authorize.NET Payment</title>
-        </pronko_authorizenet>
+        <payment>
+            <pronko_authorizenet>
+                <title>Authorize.NET Payment</title>
+                <active>1</active>
+                <model>PronkoAuthorizenetFacade</model>
+                <can_use_checkout>1</can_use_checkout>
+                <is_gateway>1</is_gateway>
+                <can_capture>1</can_capture>
+                <can_authorize>1</can_authorize>
+                <cctypes>AE,VI,MC,DI,JCB,DN</cctypes>
+            </pronko_authorizenet>
+        </payment>
     </default>
 </config>
