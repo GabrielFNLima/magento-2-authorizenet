@@ -11,6 +11,10 @@ define([
 
         getCode: function () {
             return this.code;
+        },
+
+        isActive: function () {
+            return this.getCode() === this.isChecked();
         }
     });
 })
