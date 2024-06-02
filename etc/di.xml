@@ -51,4 +51,24 @@
             </argument>
         </arguments>
     </virtualType>
+
+    <!-- Authorize.NET Payment Request Charge Transaction Builder -->
+    <virtualType name="PronkoAuthorizenetChargeTransactionBuilder" type="Pronko\Authorizenet\Gateway\Request\RequestBuilder">
+        <arguments>
+            <argument name="builder" xsi:type="object">PronkoAuthorizenetChargeBuilderComposite</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Authorize.NET Payment Request Charge Transaction Builder Composite -->
+    <virtualType name="PronkoAuthorizenetChargeBuilderComposite" type="Magento\Payment\Gateway\Request\BuilderComposite">
+        <arguments>
+            <argument name="builders" xsi:type="array">
+                <item name="charge" xsi:type="string">Pronko\Authorizenet\Gateway\Request\Builder\Charge</item>
+                <item name="payment" xsi:type="string">Pronko\Authorizenet\Gateway\Request\Builder\Payment</item>
+                <item name="productItems" xsi:type="string">Pronko\Authorizenet\Gateway\Request\Builder\ProductItems</item>
+                <item name="totals" xsi:type="string">Pronko\Authorizenet\Gateway\Request\Builder\Totals</item>
+                <item name="address" xsi:type="string">Pronko\Authorizenet\Gateway\Request\Builder\Address</item>
+            </argument>
+        </arguments>
+    </virtualType>
 </config>
